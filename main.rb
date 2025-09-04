@@ -1,5 +1,9 @@
 require 'parser/current'
 
 node = Parser::CurrentRuby.parse(ARGV[0])
-pp node
-pp node.type
+if node
+  pp node
+  pp node.type
+else
+  puts "node is nil"
+end
